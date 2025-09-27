@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vikrant Chandra · Portfolio</title>
+  <meta name="description" content="Market analyst focused on short‑term rates, trading models, and data systems.">
+  <link rel="icon" href="assets/favicon.svg">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter','system-ui','Segoe UI','Roboto','Helvetica','Arial','sans-serif'] },
+          colors: { ink:'#0a0a0a', coal:'#101010', mint:'#7bf5c5' },
+          boxShadow: { glow:'0 0 0 1px rgba(123,245,197,.15),0 10px 40px -15px rgba(123,245,197,.25)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    html{scroll-behavior:smooth}
+    .grad{background:radial-gradient(1000px 600px at 20% -10%,rgba(123,245,197,.10),transparent 60%),radial-gradient(900px 500px at 120% 10%,rgba(95,158,160,.08),transparent 50%)}
+    .card{transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
+    .card:hover{transform:translateY(-3px); box-shadow:0 10px 40px -18px rgba(0,0,0,.8); border-color:#2a2a2a}
+    .reveal{opacity:0; transform:translateY(12px); transition:opacity .7s ease, transform .7s ease}
+    .reveal.revealed{opacity:1; transform:none}
+    .reveal-slow{opacity:0; transform:translateY(18px); transition:opacity 1s ease, transform 1s ease}
+    .revealed-slow{opacity:1; transform:none}
+    /* Timeline */
+    .timeline{position:relative; padding-left:1.75rem}
+    .timeline::before{content:""; position:absolute; left:.6rem; top:0; bottom:0; width:2px; background:linear-gradient(180deg,#222,#111)}
+    .dot{position:absolute; left:0; transform:translate(-2px,6px); width:10px; height:10px; border-radius:9999px; background:#7bf5c5; box-shadow:0 0 0 2px #0a0a0a}
+    /* Subtle parallax for hero bg */
+    .parallax{will-change:transform; transition:transform .2s ease-out}
+  </style>
+</head>
+<body class="bg-ink text-neutral-200 font-sans grad">
+  <!-- NAV -->
+  <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-ink/70 border-b border-neutral-900">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <img src="assets/logo-mark.svg" class="w-7 h-7" alt="VC">
+        <span class="text-sm tracking-wider uppercase text-neutral-300">Vikrant Chandra</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#experience" class="hover:text-white">Experience</a>
+        <a href="#projects" class="hover:text-white">Projects</a>
+        <a href="#skills" class="hover:text-white">Skills</a>
+        <a href="#achievements" class="hover:text-white">Achievements</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+      </nav>
+      <a href="assets/Vikrant_Chandra_Resume.pdf" class="text-xs border border-neutral-700 hover:border-neutral-500 px-3 py-1.5 rounded-lg">Resume</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="mx-auto max-w-6xl px-4 pt-14 md:pt-24 pb-12 md:pb-20">
+      <div class="grid md:grid-cols-3 gap-10 items-center">
+        <div class="md:col-span-2 reveal">
+          <p class="text-xs tracking-widest uppercase text-neutral-400">📈 Market Analyst · Data & Trading</p>
+          <h1 class="mt-3 text-4xl md:text-6xl font-semibold leading-tight">
+            Turning short‑term rate noise into signal.
+          </h1>
+          <p class="mt-4 text-neutral-400 max-w-2xl">
+            I execute and model strategies in Brazilian DI futures, build resilient data pipelines, and ship forecasting tools that move from insight to action.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#projects" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white shadow-glow">See projects</a>
+            <a href="#contact" class="px-4 py-2 rounded-xl border border-neutral-700 hover:border-neutral-500">Contact</a>
+          </div>
+          <div class="mt-6 flex items-center gap-4 text-sm text-neutral-400">
+            <a class="hover:text-white" href="mailto:vikrantchandra12@gmail.com">✉️ vikrantchandra12@gmail.com</a>
+            <span>·</span>
+            <a class="hover:text-white" href="tel:+918340139745">📞 +91 83401 39745</a>
+            <span>·</span>
+            <a class="hover:text-white" href="https://www.linkedin.com/in/vikrant-chandra/">🔗 LinkedIn</a>
+            <span>·</span>
+            <a class="hover:text-white" href="https://github.com/viku-51">💻 GitHub</a>
+          </div>
+        </div>
+        <div class="md:justify-self-end reveal-slow">
+          <!-- Using your uploaded photo -->
+          <img src="assets/vikrant-photo.jpg" alt="Vikrant photo" class="parallax w-44 h-44 md:w-56 md:h-56 rounded-2xl border border-neutral-800 object-cover shadow-glow">
+          <p class="text-[10px] text-neutral-500 mt-2">Updated with your photo</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS STRIP -->
+    <section class="border-y border-neutral-900 bg-coal/60">
+      <div class="mx-auto max-w-6xl px-4 py-6 grid sm:grid-cols-3 gap-4 text-sm text-neutral-300">
+        <div class="card rounded-xl border border-neutral-900 p-4 bg-ink/40">⚡ 300+ trades/month · >85% exec efficiency</div>
+        <div class="card rounded-xl border border-neutral-900 p-4 bg-ink/40">🧠 ARIMA + regression → +18% signal accuracy</div>
+        <div class="card rounded-xl border border-neutral-900 p-4 bg-ink/40">🚀 Data pipelines: −40% retrieval time</div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="mx-auto max-w-6xl px-4 py-14 md:py-18">
+      <h2 class="text-xl md:text-2xl font-semibold">👋 About</h2>
+      <div class="mt-4 grid md:grid-cols-3 gap-10 items-start">
+        <p class="reveal md:col-span-1 text-neutral-300">B.Tech, Electrical Engineering, IIT (ISM) Dhanbad. Now at Futures First, focusing on short‑term rates, execution, and research. I like simple systems that are observable, automated, and fast.</p>
+        <ul class="reveal md:col-span-2 grid gap-3">
+          <li class="card p-4 rounded-xl border border-neutral-900 bg-ink/40">⏱️ Latency‑aware execution with auto‑spreaders and risk bounded to 0.5% daily VaR.</li>
+          <li class="card p-4 rounded-xl border border-neutral-900 bg-ink/40">📊 Macro/tech ingestion jobs and dashboards for faster tactical pivots.</li>
+          <li class="card p-4 rounded-xl border border-neutral-900 bg-ink/40">🧹 Clean data → simple models → reliable signals.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE TIMELINE -->
+    <section id="experience" class="border-y border-neutral-900 bg-coal/50">
+      <div class="mx-auto max-w-6xl px-4 py-14 md:py-18">
+        <h2 class="text-xl md:text-2xl font-semibold">🗓️ Experience</h2>
+        <div class="mt-8 grid md:grid-cols-2 gap-8">
+          <div class="reveal">
+            <div class="relative timeline">
+              <div class="dot"></div>
+              <div class="ml-6 p-4 rounded-xl border border-neutral-900 bg-ink/50">
+                <div class="flex items-center justify-between text-sm">
+                  <strong>Market Analyst · Futures First</strong>
+                  <span class="text-neutral-400">Sep 2023 — Present · Kolkata</span>
+                </div>
+                <ul class="mt-2 text-neutral-300 list-disc pl-5 space-y-1">
+                  <li>Executed 300+ DI futures trades/month; >85% execution efficiency.</li>
+                  <li>ARIMA & regression → +18% signal accuracy.</li>
+                  <li>Macro + technical pipelines; −40% retrieval time; VaR ≤ 0.5%.</li>
+                </ul>
+              </div>
+
+              <div class="dot" style="top: 180px;"></div>
+              <div class="ml-6 mt-6 p-4 rounded-xl border border-neutral-900 bg-ink/50">
+                <div class="flex items-center justify-between text-sm">
+                  <strong>Product Management Intern · Airbucks</strong>
+                  <span class="text-neutral-400">Jun 2021 — Aug 2021 · New Delhi</span>
+                </div>
+                <ul class="mt-2 text-neutral-300 list-disc pl-5 space-y-1">
+                  <li>UX research and usability to reduce onboarding friction.</li>
+                  <li>Prototyped flows; collaborated across product & engineering.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education timeline -->
+          <div class="reveal">
+            <h3 class="text-sm uppercase tracking-wider text-neutral-400 mb-3">🎓 Education</h3>
+            <div class="relative timeline">
+              <div class="dot"></div>
+              <div class="ml-6 p-4 rounded-xl border border-neutral-900 bg-ink/50">
+                <div class="flex items-center justify-between text-sm">
+                  <strong>IIT (ISM) Dhanbad — B.Tech, Electrical</strong>
+                  <span class="text-neutral-400">Aug 2019 — Jun 2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="mx-auto max-w-6xl px-4 py-14 md:py-18">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-xl md:text-2xl font-semibold">🧪 Projects</h2>
+        <a href="https://github.com/viku-51" target="_blank" class="text-xs underline text-neutral-400 hover:text-white">All repos</a>
+      </div>
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <article class="reveal card p-5 rounded-2xl border border-neutral-900 bg-ink/50">
+          <div class="text-xs text-neutral-400">Analytics</div>
+          <h3 class="mt-1 font-medium">Data Exploration with SQL → Power BI</h3>
+          <p class="mt-2 text-neutral-300">Normalized dataset, KPI queries, segmentation, and interactive dashboard.</p>
+          <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-400">
+            <span class="rounded-full border border-neutral-800 px-2 py-0.5">SQL</span>
+            <span class="rounded-full border border-neutral-800 px-2 py-0.5">Power BI</span>
+            <span class="rounded-full border border-neutral-800 px-2 py-0.5">R</span>
+          </div>
+          <a class="mt-4 inline-block text-sm underline hover:text-white" href="https://github.com/Viku-51/Data-Analysis-using-SQL-and-Power-Bi" target="_blank" rel="noopener">View repo</a>
+        </article>
+
+        <article class="reveal card p-5 rounded-2xl border border-neutral-900 bg-ink/50">
+          <div class="text-xs text-neutral-400">Time series</div>
+          <h3 class="mt-1 font-medium">Brazil CPI Forecasting (ARIMA)</h3>
+          <p class="mt-2 text-neutral-300">25 years of data, ADF tests, ARIMA(1,1,1), residual diagnostics, RMSE.</p>
+          <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-400">
+            <span class="rounded-full border border-neutral-800 px-2 py-0.5">Python</span>
+            <span class="rounded-full border border-neutral-800 px-2 py-0.5">pandas</span>
+            <span class="rounded-full border border-neutral-800 px-2 py-0.5">statsmodels</span>
+          </div>
+          <a class="mt-4 inline-block text-sm underline hover:text-white" href="https://github.com/Viku-51/Interest-Rate-Forecasting-Brazilian-CPI-Proxy" target="_blank" rel="noopener">View repo</a>
+        </article>
+
+        <article class="reveal card p-5 rounded-2xl border border-neutral-900 bg-ink/50">
+          <div class="text-xs text-neutral-400">Product</div>
+          <h3 class="mt-1 font-medium">“Kavach” Security Concept</h3>
+          <p class="mt-2 text-neutral-300">Detect fake QR, spam emails, and suspect storefronts; concept & design.</p>
+          <div class="mt-3 flex flex-wrap gap-2 text-[11px] text-neutral-400">
+            <span class="rounded-full border border-neutral-800 px-2 py-0.5">Figma</span>
+            <span class="rounded-full border border-neutral-800 px-2 py-0.5">Illustrator</span>
+          </div>
+          <span class="mt-4 inline-block text-sm text-neutral-500">Deck on request</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="border-y border-neutral-900 bg-coal/50">
+      <div class="mx-auto max-w-6xl px-4 py-14 md:py-18">
+        <h2 class="text-xl md:text-2xl font-semibold">🧰 Skills</h2>
+        <div class="mt-6 grid md:grid-cols-3 gap-4 text-neutral-300">
+          <ul class="space-y-2">
+            <li>🐍 Python (NumPy, Pandas, Matplotlib, Seaborn, scikit‑learn)</li>
+            <li>🧮 SQL, R · Power BI, Excel</li>
+          </ul>
+          <ul class="space-y-2">
+            <li>📊 Trading · Short‑term rates · VaR</li>
+            <li>📈 Time‑series & regression modeling</li>
+          </ul>
+          <ul class="space-y-2">
+            <li>⚙️ Data pipelines & automation</li>
+            <li>🎨 Figma · UX/UI · Communication</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="mx-auto max-w-6xl px-4 py-14 md:py-18">
+      <h2 class="text-xl md:text-2xl font-semibold">🏆 Achievements</h2>
+      <ul class="mt-4 grid md:grid-cols-2 gap-3 text-neutral-300 list-disc pl-5">
+        <li>CFA Level I Candidate; NISM Certified Research Analyst (SEBI)</li>
+        <li>Top 1% – IIT JEE Advanced 2019</li>
+        <li>Rank 383/200,000+ — Embark 2021</li>
+        <li>Top 150 — ZS Campus Beats Analytics Challenge</li>
+        <li>Raised ₹50,000 for COVID relief</li>
+        <li>NSO State Rank 25 (2016)</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="mx-auto max-w-6xl px-4 py-14 md:py-18">
+      <h2 class="text-xl md:text-2xl font-semibold">📫 Contact</h2>
+      <div class="mt-4 text-neutral-300 space-y-2">
+        <p>Email: <a class="underline hover:text-white" href="mailto:vikrantchandra12@gmail.com">vikrantchandra12@gmail.com</a></p>
+        <p>Phone: <a class="underline hover:text-white" href="tel:+918340139745">+91 83401 39745</a></p>
+        <p>LinkedIn: <a class="underline hover:text-white" href="https://www.linkedin.com/in/vikrant-chandra/">linkedin.com/in/vikrant-chandra</a></p>
+        <p>GitHub: <a class="underline hover:text-white" href="https://github.com/viku-51">github.com/viku-51</a></p>
+      </div>
+      <form name="contact" method="POST" data-netlify="true" class="mt-6 grid gap-3 max-w-lg">
+        <input type="hidden" name="form-name" value="contact">
+        <input required name="name" placeholder="Your name" class="bg-ink border border-neutral-800 rounded-xl px-4 py-2 outline-none focus:border-neutral-600">
+        <input required name="email" type="email" placeholder="you@example.com" class="bg-ink border border-neutral-800 rounded-xl px-4 py-2 outline-none focus:border-neutral-600">
+        <textarea required name="message" rows="5" placeholder="Say hello..." class="bg-ink border border-neutral-800 rounded-xl px-4 py-2 outline-none focus:border-neutral-600"></textarea>
+        <button class="justify-self-start px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="border-t border-neutral-900">
+    <div class="mx-auto max-w-6xl px-4 py-6 text-sm text-neutral-500">
+      © <span id="year"></span> Vikrant Chandra. Built with HTML + Tailwind.
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          if(e.target.classList.contains('reveal-slow')) e.target.classList.add('revealed-slow');
+          else e.target.classList.add('revealed');
+          io.unobserve(e.target);
+        }
+      });
+    }, {threshold: 0.12});
+    document.querySelectorAll('.reveal, .reveal-slow').forEach(el=>io.observe(el));
+
+    // Subtle parallax on the hero photo
+    const photo = document.querySelector('.parallax');
+    window.addEventListener('scroll', ()=>{
+      const y = window.scrollY * 0.05;
+      if(photo){ photo.style.transform = `translateY(${y}px)`; }
+    }, {passive:true});
+  </script>
+</body>
+</html>
